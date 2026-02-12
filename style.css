@@ -21,7 +21,7 @@
 }
 
 body.dark {
-    --bg-color: #000000;
+    --bg-color: #0f0f0f;
     --text-primary: #e4e4e4;
     --text-secondary: #c3c3c3;
     --accent-color: #ff7300;
@@ -136,3 +136,4 @@ h2 {
 .menu-desktop ul li a:hover {
     color: var(--accent-color);
 }
+
