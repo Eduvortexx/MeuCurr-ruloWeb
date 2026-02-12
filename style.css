@@ -1,0 +1,140 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    transition: .4s;
+}
+
+
+
+/*estilização do botão de alternância de tema*/
+
+.trilho{
+    width: 60px;
+    height: 30px;
+    background-color: #6a6868;
+    border-radius: 30px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.trilho .indicador{
+    width: 30px;
+    height: 30px;
+    background-color: #000000;
+    border-radius: 50%;
+    transform: scale(.8);
+    position: absolute;
+    left: 0;
+    transition: .4s;
+}
+
+.trilho.dark{
+    background-color: #c3c3c3;
+}
+
+.trilho.dark .indicador{
+    left: 30px;
+    background-color: #fff;
+    ;
+}
+
+body.dark{
+    background-color: #e4e4e4;
+}
+
+/*estilização do botão de alternância de tema FINAL*/
+
+/*estilização apresentação*/
+
+body {
+    display: flex;
+    flex-direction: column;  /* Coloca o menu em cima e o conteúdo embaixo */
+    align-items: center;     /* Centraliza tudo horizontalmente */
+    justify-content: flex-start; /* Alinha tudo ao TOPO, não ao centro */
+    min-height: 100vh;       /* Garante que o fundo cubra a tela toda */
+    margin: 0;               /* Remove margens padrão do navegador */
+    padding-top: 80px;       /* Cria o espaço exato para o texto não bater no menu */
+}
+
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 250px; 
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px; /* Espaço entre o nome e o parágrafo */
+    color: #807e7e;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px; /* Espaço entre o cargo e o parágrafo */
+    color: #807e7e;
+}
+
+.descricao-curta {
+    /* Limita a largura para o texto não ocupar a tela inteira */
+    max-width: 600px; 
+    font-size: 18px;
+    line-height: 1.6; /* Melhora a leitura */
+    color: #333;
+    margin: 0 auto; /* Garante a centralização horizontal */
+}
+
+/*estilização apresentação*/
+
+/*estilização botões navs*/
+
+.menu-desktop{
+    width: 100%;
+    position: fixed;
+    top: 20px;
+
+}
+
+.menu-desktop ul {
+    list-style-type: none; /* Remove as bolinhas */
+    margin: 0;
+    padding: 0;
+    display: flex;         /* Coloca os itens lado a lado */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Cada item da lista (li) */
+.menu-desktop ul li {
+    margin: 0 30px;        /* A distância elegante entre uma palavra e outra */
+}
+
+/* O link (a) dentro de cada item */
+.menu-desktop ul li a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #333;           /* Cor do texto */
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 500;
+    transition: 0.3s;      /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse */
+.menu-desktop ul li a:hover {
+    color: #ff7300;        /* Cor de destaque */
+}
