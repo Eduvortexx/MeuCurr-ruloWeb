@@ -1,5 +1,6 @@
-
-
+/* =========================
+   RESET
+========================= */
 *{
     margin: 0;
     padding: 0;
@@ -7,134 +8,131 @@
     font-family: 'Outfit', sans-serif;
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    transition: .4s;
+/* =========================
+   VARIABLES (TEMA)
+========================= */
+:root {
+    --bg-color: #e4e4e4;
+    --text-primary: #807e7e;
+    --text-secondary: #333;
+    --accent-color: #ff7300;
+    --trilho-bg: #6a6868;
+    --indicador-bg: #000;
 }
 
+body.dark {
+    --bg-color: #000000;
+    --text-primary: #e4e4e4;
+    --text-secondary: #c3c3c3;
+    --accent-color: #ff7300;
+    --trilho-bg: #c3c3c3;
+    --indicador-bg: #ffffff;
+}
 
+/* =========================
+   LAYOUT
+========================= */
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 80px;
+    background-color: var(--bg-color);
+    transition: background-color .4s ease;
+}
 
-/*estilização do botão de alternância de tema*/
-
+/* =========================
+   BOTÃO DARK MODE
+========================= */
 .trilho{
     width: 60px;
     height: 30px;
-    background-color: #6a6868;
+    background-color: var(--trilho-bg);
     border-radius: 30px;
     position: fixed;
     top: 20px;
     right: 20px;
     z-index: 1000;
     cursor: pointer;
+    transition: background-color .4s ease;
 }
 
 .trilho .indicador{
     width: 30px;
     height: 30px;
-    background-color: #000000;
+    background-color: var(--indicador-bg);
     border-radius: 50%;
     transform: scale(.8);
     position: absolute;
     left: 0;
-    transition: .4s;
-}
-
-.trilho.dark{
-    background-color: #c3c3c3;
+    transition: transform .4s ease, background-color .4s ease;
 }
 
 .trilho.dark .indicador{
-    left: 30px;
-    background-color: #fff;
-    ;
+    transform: translateX(30px) scale(.8);
 }
 
-body.dark{
-    background-color: #e4e4e4;
-}
-
-/*estilização do botão de alternância de tema FINAL*/
-
-/*estilização apresentação*/
-
-body {
-    display: flex;
-    flex-direction: column;  /* Coloca o menu em cima e o conteúdo embaixo */
-    align-items: center;     /* Centraliza tudo horizontalmente */
-    justify-content: flex-start; /* Alinha tudo ao TOPO, não ao centro */
-    min-height: 100vh;       /* Garante que o fundo cubra a tela toda */
-    margin: 0;               /* Remove margens padrão do navegador */
-    padding-top: 80px;       /* Cria o espaço exato para o texto não bater no menu */
-}
-
+/* =========================
+   APRESENTAÇÃO
+========================= */
 .apresentacao {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 250px; 
+    margin-top: 250px;
+    max-width: 900px;
+    padding: 0 20px;
 }
 
 h1 {
     font-size: 48px;
-    margin-bottom: 20px; /* Espaço entre o nome e o parágrafo */
-    color: #807e7e;
+    margin-bottom: 20px;
+    color: var(--text-primary);
 }
 
 h2 {
     font-size: 24px;
-    margin-bottom: 20px; /* Espaço entre o cargo e o parágrafo */
-    color: #807e7e;
+    margin-bottom: 20px;
+    color: var(--text-primary);
 }
 
 .descricao-curta {
-    /* Limita a largura para o texto não ocupar a tela inteira */
     max-width: 600px; 
     font-size: 18px;
-    line-height: 1.6; /* Melhora a leitura */
-    color: #333;
-    margin: 0 auto; /* Garante a centralização horizontal */
+    line-height: 1.6;
+    color: var(--text-secondary);
 }
 
-/*estilização apresentação*/
-
-/*estilização botões navs*/
-
+/* =========================
+   MENU
+========================= */
 .menu-desktop{
     width: 100%;
     position: fixed;
     top: 20px;
-
 }
 
 .menu-desktop ul {
-    list-style-type: none; /* Remove as bolinhas */
-    margin: 0;
-    padding: 0;
-    display: flex;         /* Coloca os itens lado a lado */
-    justify-content: center; /* Centraliza os itens horizontalmente */
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
 }
 
-/* Cada item da lista (li) */
 .menu-desktop ul li {
-    margin: 0 30px;        /* A distância elegante entre uma palavra e outra */
+    margin: 0 30px;
 }
 
-/* O link (a) dentro de cada item */
 .menu-desktop ul li a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: #333;           /* Cor do texto */
+    text-decoration: none;
+    color: var(--text-secondary);
     font-size: 18px;
-    font-family: sans-serif;
     font-weight: 500;
-    transition: 0.3s;      /* Efeito suave ao passar o mouse */
+    transition: color 0.3s ease;
 }
 
-/* Efeito ao passar o mouse */
 .menu-desktop ul li a:hover {
-    color: #ff7300;        /* Cor de destaque */
+    color: var(--accent-color);
 }
