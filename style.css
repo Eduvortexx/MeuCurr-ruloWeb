@@ -12,21 +12,20 @@
    VARIABLES (TEMA)
 ========================= */
 :root {
-    --bg-color: #e4e4e4;
-    --text-primary: #807e7e;
-    --text-secondary: #333;
+    --bg-color: #f8f9fa;
+    --text-primary: #444;
+    --text-secondary: #555;
     --accent-color: #ff7300;
-    --trilho-bg: #6a6868;
-    --indicador-bg: #000;
+    --toggle-track-bg: #6a6868;
+    --toggle-thumb-bg: #000;
 }
 
 body.dark {
     --bg-color: #0f0f0f;
     --text-primary: #e4e4e4;
     --text-secondary: #c3c3c3;
-    --accent-color: #ff7300;
-    --trilho-bg: #c3c3c3;
-    --indicador-bg: #ffffff;
+    --toggle-track-bg: #c3c3c3;
+    --toggle-thumb-bg: #ffffff;
 }
 
 /* =========================
@@ -38,23 +37,23 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 80px;
+    padding-top: 100px;
     background-color: var(--bg-color);
     transition: background-color .4s ease;
 }
 
 /* =========================
-   BOTÃO DARK MODE
+   DARK MODE BUTTON
 ========================= */
 .trilho{
     width: 60px;
     height: 30px;
-    background-color: var(--trilho-bg);
+    background-color: var(--toggle-track-bg);
     border-radius: 30px;
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1000;
+    border: none;
     cursor: pointer;
     transition: background-color .4s ease;
 }
@@ -62,7 +61,7 @@ body{
 .trilho .indicador{
     width: 30px;
     height: 30px;
-    background-color: var(--indicador-bg);
+    background-color: var(--toggle-thumb-bg);
     border-radius: 50%;
     transform: scale(.8);
     position: absolute;
@@ -82,21 +81,24 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 250px;
     max-width: 900px;
     padding: 0 20px;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 2px;
     margin-bottom: 20px;
     color: var(--text-primary);
+    transition: color .4s ease;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 20px;
     color: var(--text-primary);
+    transition: color .4s ease;
 }
 
 .descricao-curta {
@@ -104,6 +106,7 @@ h2 {
     font-size: 18px;
     line-height: 1.6;
     color: var(--text-secondary);
+    transition: color .4s ease;
 }
 
 /* =========================
@@ -130,10 +133,25 @@ h2 {
     color: var(--text-secondary);
     font-size: 18px;
     font-weight: 500;
+    position: relative;
     transition: color 0.3s ease;
+}
+
+.menu-desktop ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: var(--accent-color);
+    transition: width .3s ease;
 }
 
 .menu-desktop ul li a:hover {
     color: var(--accent-color);
 }
 
+.menu-desktop ul li a:hover::after {
+    width: 100%;
+}
