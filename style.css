@@ -82,7 +82,7 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 250px;
+    margin-top: 100px;
     max-width: 900px;
     padding: 0 20px;
 }
@@ -137,3 +137,18 @@ h2 {
     color: var(--accent-color);
 }
 
+
+/* animação do gif */
+
+.gif-apresentacao {
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    transition: transform 3s ease, opacity 3s ease;
+}
+
+.gif-apresentacao.fly-right {
+    transform: translateX(150vw); /* move pra fora da tela */
+    opacity: 0; /* desaparece */
+}
