@@ -76,6 +76,11 @@ body.dark {
     display: flex;
 }
 
+.menu-desktop ul li a.ativo {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
 .menu-desktop ul li {
     margin: 0 20px;
 }
@@ -154,13 +159,15 @@ h2 {
 }
 
 /* =========================
-   TRAJETÓRIA
+   TRAJETÓRIA (PADRÃO IGUAL INDEX)
 ========================= */
-.trajetoria {
-    max-width: 900px;
-    margin: 120px auto 0 auto;
-    padding: 0 20px;
+
+.timeline {
+    position: relative;
+    margin: 80px 0 40px 0;
+    padding: 20px 0;
 }
+
 
 .trajetoria p {
     color: var(--text-secondary);
@@ -188,6 +195,8 @@ body.dark .trajetoria p {
     background-color: var(--accent-color);
 }
 
+
+
 /* =========================
    EVENTOS - GLASS EFFECT
 ========================= */
@@ -207,6 +216,18 @@ body.dark .trajetoria p {
 
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
+
+.timeline-event {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.timeline-event.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
 
 /* Alterna lados */
 .timeline-event:nth-child(odd) {
@@ -259,3 +280,110 @@ body.dark .timeline-event {
    ANIMAÇÃO DO GIF DE APRESENTAÇÃO FINAL
 ========================= */
 
+/* =========================
+   FOOTER FULL WIDTH
+========================= */
+
+.main-footer {
+    width: 100%;
+    margin-top: 80px;
+    padding: 20px 0;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* muda aqui */
+    gap: 60px;                 /* controla o espaço entre eles */
+}
+
+.footer-gif {
+    width: 400px;
+    height: auto;
+}
+
+.footer-btn {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text-primary);
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.footer-btn:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+
+/* =========================
+   TABELA PROJETOS - GLASS
+========================= */
+
+.tabela-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.tabela-projetos {
+    width: 80%;
+    max-width: 900px;
+    border-collapse: collapse;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.tabela-projetos th,
+.tabela-projetos td {
+    padding: 20px;
+    text-align: center;
+}
+
+.tabela-projetos th {
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.tabela-projetos td {
+    color: var(--text-secondary);
+}
+
+.tabela-projetos tbody tr {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tabela-projetos tbody tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+}
+
+body.dark .tabela-projetos {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}

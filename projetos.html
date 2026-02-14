@@ -1,31 +1,96 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
-    <link rel="stylesheet" href="style.css"> <!-- se tiver CSS separado -->
+    <title>Projetos - Eduardo Silva</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div>
-    <div class="trilho" id="trilho">
-        <div class="indicador"></div>
-    </div>
-</div>
+    <!-- HEADER IGUAL AO INDEX -->
+    <header class="main-header">
+        <nav class="menu-desktop">
+            <ul>
+                <li><a href="index.html">Sobre mim</a></li>
+                <li><a href="trajetoria.html">Minha trajetória</a></li>
+                <li><a href="projetos.html" class="ativo">Projetos</a></li>
 
-<script src="main.js"></script>
+            </ul>
+        </nav>
 
-    <h1>Projetos</h1>
-    <p class="descricao-curta">Aqui você coloca informações sobre você...</p>
+        <div class="trilho" id="trilho">
+            <div class="indicador"></div>
+        </div>
+    </header>
 
-    <nav class="menu-desktop">
-        <ul>
-            <li><a href="index.html">Sobre mim</a></li>
-            <li><a href="trajetoria.html">Minha trajetória</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-        </ul>
-    </nav>
+    <!-- CONTEÚDO -->
+    <main class="apresentacao">
+        <h1>Projetos</h1>
+        <p class="descricao-curta">
+            Aqui estão alguns dos projetos que desenvolvi ao longo da minha jornada.
+        </p>
+
+        <div class="tabela-container">
+            <table class="tabela-projetos">
+                <thead>
+                    <tr>
+                        <th>Projeto</th>
+                        <th>Tecnologia/Habilidade</th>
+                        <th>Ano</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="window.open('https://github.com/Eduvortexx/FeedLyze', '_blank')">
+                        <td>FeedLyze</td>
+                        <td>HTML, CSS, Node.js</td>
+                        <td>2026</td>
+                    </tr>
+
+                    <tr onclick="window.open('https://github.com/Eduvortexx/Challenge-Python', '_blank')">
+                        <td>Análise de dados</td>
+                        <td>Python</td>
+                        <td>2025</td>
+                    </tr>
+
+                    <tr onclick="window.open('https://github.com/Eduvortexx/jogo-do-n-mero-secreto', '_blank')">
+                        <td>Jogo do Número Secreto</td>
+                        <td>HTML, CSS, JavaScript</td>
+                        <td>2025</td>
+
+                    <tr onclick="window.open('https://www.amazon.com.br/dp/B0FMPHP1W3', '_blank')">
+                        <td>Livro: Os Terríveis Pesadelos de Charlie</td>
+                        <td>Escrita criativa</td>
+                        <td>2025</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- FOOTER IGUAL AO INDEX -->
+    <footer class="main-footer">
+        <div class="footer-content">
+
+            <a href="https://github.com/Eduvortexx" target="_blank" class="footer-btn">
+                GitHub
+            </a>
+
+            <img src="https://i.redd.it/8jqj1311bdeb1.gif"
+                 alt="arvore rodapé"
+                 class="footer-gif">
+
+            <a href="https://www.linkedin.com/in/eduardo-silva-03670920a/" target="_blank" class="footer-btn">
+                LinkedIn
+            </a>
+
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 
 </body>
 </html>
