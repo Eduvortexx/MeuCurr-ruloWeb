@@ -387,3 +387,101 @@ body.dark .tabela-projetos {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+    /* ===== HEADER ===== */
+    .main-header {
+        height: 70px;
+    }
+
+    body {
+        padding-top: 80px;
+    }
+
+    /* ===== MENU ===== */
+    .menu-desktop ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .menu-desktop ul li {
+        margin: 0 10px;
+    }
+
+    .menu-desktop ul li a {
+        font-size: 14px;
+    }
+
+    /* ===== TÍTULOS ===== */
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .descricao-curta {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline {
+        margin: 40px 0 20px 0;
+    }
+
+    .timeline::before {
+        left: 8px;
+    }
+
+    .timeline-event {
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+        margin: 20px 0 20px 30px;
+        padding: 15px 18px;
+    }
+
+    .timeline-year {
+        font-size: 14px;
+    }
+
+    /* ===== TABELA PROJETOS ===== */
+    .tabela-container {
+        margin-top: 30px;
+    }
+
+    .tabela-projetos {
+        width: 95%;
+        font-size: 14px;
+    }
+
+    .tabela-projetos th,
+    .tabela-projetos td {
+        padding: 12px;
+    }
+
+    /* ===== FOOTER ===== */
+    .main-footer {
+        padding: 30px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-gif {
+        width: 220px;
+    }
+
+}
+
